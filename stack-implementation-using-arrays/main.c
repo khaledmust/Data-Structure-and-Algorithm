@@ -87,11 +87,20 @@ int main (void)
         
         case 'e':
             /* Display the top most element on the stack. */
-            printf ("The top of the stack is: ");
-            Display ( Client_StackTop (&my_stack) );
+            printf ("The top of the stack is: %d\n", StackTop (&my_stack));
+            Display ( StackTop (&my_stack) );
             printf ("\n");
+            break;
 
         case 'f':
+            printf ("The first element in the queue is: %d.\n", StackFirstElement (&my_stack));
+            break;
+
+        case 'g':
+            printf ("The last element in the queue is: %d.\n", StackLastElement (&my_stack));
+            break;
+
+        case 'z':
             printf ("Closing ...");
         default:
             break;

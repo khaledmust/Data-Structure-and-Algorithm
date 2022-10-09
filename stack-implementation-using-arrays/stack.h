@@ -89,3 +89,7 @@ void TraverseStack ( Stack_t *pstack, void (*pf) (StackEntry element) );
  * @return First element in the stack.
  */
 StackEntry StackFirstElement (Stack_t *pstack);
+
+StackEntry StackLastElement (Stack_t *pstack);
+
+void StackCopy (Stack_t *pstack, Stack_t *copy);

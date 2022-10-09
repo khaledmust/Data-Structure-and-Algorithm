@@ -88,7 +88,7 @@ void InitStack (Stack_t *pstack)
  */
 StackEntry StackTop (Stack_t *pstack)
 {
-    return ( pstack -> entry [ pstack -> top ] );
+    return ( pstack -> entry [ -- pstack -> top ] );
 }
 
 /**
@@ -142,4 +142,14 @@ void TraverseStack ( Stack_t *pstack, void (*pf) (StackEntry element) )
 StackEntry StackFirstElement (Stack_t *pstack)
 {
     return pstack -> entry [0];
+}
+
+
+StackEntry StackLastElement (Stack_t *pstack)
+{
+    return StackTop (pstack);
+}
+
+void StackCopy (Stack_t *pstack, Stack_t *pcopy)
+{
 }
